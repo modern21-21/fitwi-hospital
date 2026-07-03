@@ -1,4 +1,14 @@
 User-agent: *
 Allow: /
 
+# Block admin / private pages (good SEO practice even if not used yet)
+Disallow: /admin/
+Disallow: /login/
+Disallow: /dashboard/
+Disallow: /private/
+
+# Optional: block query search patterns (prevents duplicate indexing)
+Disallow: /*?*
+
+# Sitemap location
 Sitemap: https://fitwi-central-hospital.netlify.app/sitemap.xml

@@ -23,32 +23,41 @@
 <!-- Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
+<!-- Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <!-- ================= NAVBAR ================= -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow sticky-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow">
   <div class="container">
 
-    <a class="navbar-brand fw-bold" href="index.html">Fitwi Central Hospital</a>
+    <a class="navbar-brand fw-bold" href="index.html">
+      <i class="bi bi-hospital-fill me-2"></i>
+      Fitwi Central Hospital
+    </a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="nav">
+
       <ul class="navbar-nav ms-auto">
+
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="departments.html">Departments</a></li>
         <li class="nav-item"><a class="nav-link active" href="testimonies.html">Testimonials</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-      </ul>
-    </div>
 
+      </ul>
+
+    </div>
   </div>
 </nav>
 
@@ -57,57 +66,68 @@
   <div class="container">
     <h1 class="fw-bold">What Our Patients Say</h1>
     <p class="lead">
-      Real stories from patients who received life-changing care at Fitwi Central Hospital.
+      Real stories from patients who received compassionate and life-changing care.
     </p>
   </div>
 </header>
 
 <!-- ================= TESTIMONIALS ================= -->
 <section class="py-5">
+
   <div class="container">
+
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Patient Testimonials</h2>
+      <p class="text-muted">
+        Hear from patients who trusted Fitwi Central Hospital for their healthcare journey.
+      </p>
+    </div>
 
     <div class="row g-4">
 
+      <!-- Testimonial 1 -->
       <div class="col-md-4">
-        <div class="card shadow h-100">
+        <div class="card shadow border-0 h-100">
           <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2"
                class="card-img-top"
-               alt="Happy patient testimonial">
+               alt="Patient testimonial smiling">
           <div class="card-body">
-            <h5>Mary Johnson</h5>
-            <p class="text-muted">Cardiology Patient</p>
-            <p>
-              “The doctors saved my life. The cardiology team was professional, caring, and very supportive throughout my treatment.”
+            <h5 class="fw-bold">Mary Johnson</h5>
+            <p class="text-primary mb-2">Cardiology Patient</p>
+            <p class="text-muted">
+              “The cardiology team saved my life. The care, attention, and professionalism were outstanding throughout my treatment.”
             </p>
           </div>
         </div>
       </div>
 
+      <!-- Testimonial 2 -->
       <div class="col-md-4">
-        <div class="card shadow h-100">
+        <div class="card shadow border-0 h-100">
           <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df"
                class="card-img-top"
-               alt="Patient recovery success story">
+               alt="Recovered surgery patient">
           <div class="card-body">
-            <h5>James Smith</h5>
-            <p class="text-muted">Surgery Patient</p>
-            <p>
-              “My surgery went smoothly and recovery was faster than expected. The hospital staff was amazing.”
+            <h5 class="fw-bold">James Smith</h5>
+            <p class="text-primary mb-2">Surgery Patient</p>
+            <p class="text-muted">
+              “My surgery was successful and recovery was smooth. The doctors and nurses were incredibly supportive.”
             </p>
           </div>
         </div>
       </div>
 
+      <!-- Testimonial 3 -->
       <div class="col-md-4">
-        <div class="card shadow h-100">
+        <div class="card shadow border-0 h-100">
           <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f"
                class="card-img-top"
-               alt="Doctor patient consultation review">
+               alt="Happy pediatric patient family">
           <div class="card-body">
-            <h5>Linda Brown</h5>
-            <p class="text-muted">Pediatrics Patient</p>
-            <p>
-              “My child received excellent care. The pediatric department is truly compassionate and professional.”
+            <h5 class="fw-bold">Linda Brown</h5>
+            <p class="text-primary mb-2">Pediatrics Patient</p>
+            <p class="text-muted">
+              “My child received excellent care. The pediatric department is compassionate, skilled, and truly caring.”
             </p>
           </div>
         </div>
@@ -116,28 +136,38 @@
     </div>
 
   </div>
+
 </section>
 
-<!-- ================= EXTRA SEO CONTENT ================= -->
+<!-- ================= SEO CONTENT ================= -->
 <section class="py-5 bg-light">
+
   <div class="container">
-    <h2 class="fw-bold">Trusted Healthcare Experiences</h2>
+
+    <h2 class="fw-bold mb-3">Trusted Healthcare Experiences</h2>
+
     <p>
-      At Fitwi Central Hospital, patient satisfaction is our highest priority. Our medical experts
-      provide advanced healthcare services including cardiology, pediatrics, surgery, internal medicine,
-      and emergency care. Thousands of patients trust our hospital every year for safe and reliable treatment.
+      Fitwi Central Hospital is committed to delivering high-quality healthcare services with compassion and excellence.
+      Our specialists in cardiology, pediatrics, surgery, internal medicine, and emergency care work together to ensure
+      every patient receives the best possible treatment.
     </p>
 
     <p>
-      We believe in compassionate healthcare, modern medical technology, and expert doctors working together
-      to ensure the best possible outcomes for every patient.
+      Thousands of patients trust our hospital each year for safe, reliable, and modern healthcare services. Your health
+      and satisfaction remain our top priorities.
     </p>
+
   </div>
+
 </section>
 
 <!-- ================= FOOTER ================= -->
 <footer class="bg-primary text-white text-center py-4">
-  <p class="mb-0">© 2026 Fitwi Central Hospital</p>
+  <div class="container">
+    <h5>Fitwi Central Hospital</h5>
+    <p>Compassion • Care • Excellence</p>
+    <p class="mb-0">© 2026 All Rights Reserved</p>
+  </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

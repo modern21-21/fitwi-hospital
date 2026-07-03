@@ -13,6 +13,25 @@ body {
     background-color: #fff;
 }
 
+/* ================= CONTAINER ================= */
+.container {
+    max-width: 1100px;
+}
+
+/* ================= TYPOGRAPHY ================= */
+p {
+    font-size: 16px;
+    color: #444;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 700;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
 /* ================= NAVBAR ================= */
 .navbar {
     padding: 15px 0;
@@ -35,15 +54,59 @@ body {
 /* ================= HERO ================= */
 .hero {
     position: relative;
+    height: 90vh;
+    overflow: hidden;
 }
 
+/* HERO IMAGE */
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* DARK OVERLAY */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 1;
+}
+
+/* HERO CONTENT */
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    width: 90%;
+    max-width: 900px;
+}
+
+/* HERO TEXT */
 .hero h1 {
     font-size: 3rem;
-    text-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
 
 .hero p {
     font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Make long paragraph readable */
+.hero-content p {
+    background: rgba(0, 0, 0, 0.45);
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 10px;
 }
 
 /* ================= BUTTONS ================= */
@@ -61,14 +124,6 @@ section {
     padding: 60px 0;
 }
 
-h1, h2, h3, h4 {
-    font-weight: 700;
-}
-
-h2 {
-    margin-bottom: 20px;
-}
-
 /* ================= CARDS ================= */
 .card {
     border: none;
@@ -78,7 +133,7 @@ h2 {
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .card img {
@@ -88,7 +143,7 @@ h2 {
     border-top-right-radius: 12px;
 }
 
-/* ================= STATS ================= */
+/* ================= STATISTICS ================= */
 .stats h2 {
     font-size: 2.2rem;
 }
@@ -98,7 +153,7 @@ footer {
     font-size: 14px;
 }
 
-footer h5 {
+footer h4 {
     margin-bottom: 10px;
 }
 
@@ -116,8 +171,42 @@ footer h5 {
     z-index: 9999;
 }
 
+/* ================= FULL SCREEN MENU ================= */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.92);
+    z-index: 9999;
+    display: none;
+}
+
+.overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.overlay-content a {
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    margin: 15px 0;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.overlay-content a:hover {
+    color: #00c389;
+}
+
 /* ================= MOBILE FIX ================= */
 @media (max-width: 768px) {
+
     .hero h1 {
         font-size: 2rem;
     }
@@ -129,14 +218,19 @@ footer h5 {
     .navbar-nav {
         text-align: center;
     }
+
+    .hero {
+        height: 70vh;
+    }
 }
 
-/* ================= SEO IMPROVEMENT ================= */
-p {
-    font-size: 16px;
-    color: #444;
+/* ================= ACCESSIBILITY ================= */
+a {
+    text-decoration: none;
 }
 
-.container {
-    max-width: 1100px;
+button:focus,
+a:focus {
+    outline: 2px solid #00c389;
+    outline-offset: 3px;
 }
