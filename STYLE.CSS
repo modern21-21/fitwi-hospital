@@ -4,19 +4,26 @@
     --primary-dark: #0f4fc2;
     --success: #00c389;
     --danger: #ff4d4d;
+
     --text: #1f2937;
     --muted: #6b7280;
+
     --bg: #f5f8fc;
     --card: #ffffff;
     --border: #e6edf5;
+
     --shadow: 0 8px 25px rgba(0,0,0,0.06);
 }
 
-/* ================= GLOBAL ================= */
+/* ================= GLOBAL RESET ================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -24,11 +31,6 @@ body {
     background: var(--bg);
     color: var(--text);
     line-height: 1.7;
-}
-
-/* smooth scrolling */
-html {
-    scroll-behavior: smooth;
 }
 
 /* ================= TYPOGRAPHY ================= */
@@ -42,12 +44,13 @@ p {
     color: var(--muted);
 }
 
-/* ================= NAVBAR (HOSPITAL STYLE) ================= */
+/* ================= NAVBAR FIX ================= */
 .navbar {
-    background: rgba(255,255,255,0.95) !important;
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.92) !important;
+    backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
     padding: 14px 0;
+    transition: 0.3s ease;
 }
 
 .navbar-brand {
@@ -67,9 +70,20 @@ p {
     color: var(--primary) !important;
 }
 
+/* ACTIVE LINK FIX */
+.nav-link.active {
+    color: var(--primary) !important;
+    font-weight: 700;
+}
+
 /* ================= HERO ================= */
+header {
+    position: relative;
+}
+
 header img {
-    filter: brightness(65%);
+    filter: brightness(60%);
+    width: 100%;
 }
 
 header h1 {
@@ -116,10 +130,10 @@ header p {
 
 /* ================= SECTIONS ================= */
 section {
-    padding: 85px 0;
+    padding: 80px 0;
 }
 
-/* ================= CARDS (MODERN HOSPITAL UI) ================= */
+/* ================= CARDS ================= */
 .card {
     border: 1px solid var(--border);
     border-radius: 16px;
@@ -139,7 +153,7 @@ section {
     object-fit: cover;
 }
 
-/* ================= STATISTICS BOX ================= */
+/* ================= STATISTICS ================= */
 .shadow {
     box-shadow: var(--shadow) !important;
     border-radius: 14px;
@@ -171,7 +185,8 @@ footer {
     padding-top: 60px;
 }
 
-footer h5 {
+footer h5,
+footer h2 {
     color: #ffffff;
 }
 
@@ -190,6 +205,7 @@ footer i:hover {
     color: var(--muted) !important;
 }
 
+/* FIX Bootstrap override issue */
 .bg-light {
     background: #f3f7ff !important;
 }
@@ -199,7 +215,6 @@ footer i:hover {
     will-change: transform;
 }
 
-/* smooth fade helper */
 .fade-in {
     opacity: 0;
     transform: translateY(25px);
@@ -227,6 +242,4 @@ footer i:hover {
     }
 
     .card img {
-        height: 180px;
-    }
-}
+       
