@@ -5,7 +5,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Testimonies | Fitwi Central Hospital</title>
+<title>Patient Testimonials | Fitwi Central Hospital Reviews & Experiences</title>
+
+<meta name="description" content="Read real patient testimonials from Fitwi Central Hospital. Discover experiences with our doctors, treatments, and healthcare services." />
+
+<link rel="canonical" href="https://fitwi-central-hospital.netlify.app/testimonies.html" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Patient Testimonials | Fitwi Central Hospital" />
+<meta property="og:description" content="Real patient experiences and reviews from Fitwi Central Hospital." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://fitwi-central-hospital.netlify.app/testimonies.html" />
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.ico" />
 
 <!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -17,44 +30,48 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
 <!-- ================= NAVBAR ================= -->
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow" aria-label="Main navigation">
 
 <div class="container">
 
-<a class="navbar-brand fw-bold" href="index.html">
+<a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
 <i class="bi bi-hospital-fill me-2"></i>
 Fitwi Central Hospital
 </a>
 
-<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+<button class="navbar-toggler" type="button"
+data-bs-toggle="collapse"
+data-bs-target="#navbarNav"
+aria-controls="navbarNav"
+aria-expanded="false"
+aria-label="Toggle navigation">
+
 <span class="navbar-toggler-icon"></span>
 </button>
 
 <div class="collapse navbar-collapse" id="navbarNav">
 
-<ul class="navbar-nav ms-auto">
+<ul class="navbar-nav ms-auto align-items-lg-center">
 
 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-
 <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-
 <li class="nav-item"><a class="nav-link" href="departments.html">Departments</a></li>
 
-<li class="nav-item"><a class="nav-link active" href="testimonies.html">Testimonies</a></li>
+<li class="nav-item">
+<a class="nav-link active" aria-current="page" href="testimonies.html">Testimonials</a>
+</li>
 
 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-
 <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
 
-<li class="nav-item ms-lg-3">
-<a href="appointment.html" class="btn btn-success">
+<li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+<a href="appointment.html" class="btn btn-success fw-semibold">
 Get Appointment
 </a>
 </li>
@@ -64,7 +81,6 @@ Get Appointment
 </div>
 
 </div>
-
 </nav>
 
 <!-- ================= HERO ================= -->
@@ -74,16 +90,17 @@ Get Appointment
 <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1600&q=80"
 class="w-100"
 style="height:55vh;object-fit:cover;"
-alt="Hospital">
+alt="Doctors and patients in hospital environment"
+loading="lazy">
 
-<div class="position-absolute top-50 start-50 translate-middle text-center text-white">
+<div class="position-absolute top-50 start-50 translate-middle text-center text-white px-3">
 
 <h1 class="display-4 fw-bold">
 Patient Testimonials
 </h1>
 
 <p class="lead">
-What Our Patients Say About Us
+Real experiences from our patients and families
 </p>
 
 </div>
@@ -98,38 +115,34 @@ What Our Patients Say About Us
 
 <div class="text-center mb-5">
 
-<h2 class="fw-bold">
-Trusted by Thousands of Patients
-</h2>
+<h2 class="fw-bold">Trusted Patient Experiences</h2>
 
 <p class="text-muted">
-Real experiences from our valued patients.
+Feedback from patients who received care at Fitwi Central Hospital
 </p>
 
 </div>
 
 <div class="row g-4">
 
-<!-- Review 1 -->
-
+<!-- TESTIMONIAL 1 -->
 <div class="col-md-4">
 
-<div class="card shadow h-100">
+<div class="card shadow h-100 border-0">
 
 <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=600&q=80"
 class="card-img-top"
-alt="Patient">
+alt="Female patient testimonial"
+loading="lazy">
 
 <div class="card-body">
 
-<h5>Sarah Johnson</h5>
+<h3 class="h5">Sarah Johnson</h3>
 
-<div class="text-warning mb-3">
-★★★★★
-</div>
+<div class="text-warning mb-2" aria-label="5 star rating">★★★★★</div>
 
-<p>
-"The doctors and nurses were caring and professional. I received excellent treatment and recovered quickly."
+<p class="mb-0">
+“Doctors and nurses were extremely caring and professional. My recovery was smooth and well supported.”
 </p>
 
 </div>
@@ -138,26 +151,24 @@ alt="Patient">
 
 </div>
 
-<!-- Review 2 -->
-
+<!-- TESTIMONIAL 2 -->
 <div class="col-md-4">
 
-<div class="card shadow h-100">
+<div class="card shadow h-100 border-0">
 
 <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80"
 class="card-img-top"
-alt="Patient">
+alt="Male patient testimonial"
+loading="lazy">
 
 <div class="card-body">
 
-<h5>Michael Brown</h5>
+<h3 class="h5">Michael Brown</h3>
 
-<div class="text-warning mb-3">
-★★★★★
-</div>
+<div class="text-warning mb-2" aria-label="5 star rating">★★★★★</div>
 
-<p>
-"The facilities are modern and clean. The medical staff made me feel comfortable throughout my treatment."
+<p class="mb-0">
+“The hospital is clean and modern. The staff made me feel comfortable and well cared for throughout treatment.”
 </p>
 
 </div>
@@ -166,26 +177,24 @@ alt="Patient">
 
 </div>
 
-<!-- Review 3 -->
-
+<!-- TESTIMONIAL 3 -->
 <div class="col-md-4">
 
-<div class="card shadow h-100">
+<div class="card shadow h-100 border-0">
 
 <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=80"
 class="card-img-top"
-alt="Patient">
+alt="Patient review testimonial"
+loading="lazy">
 
 <div class="card-body">
 
-<h5>Emily Wilson</h5>
+<h3 class="h5">Emily Wilson</h3>
 
-<div class="text-warning mb-3">
-★★★★★
-</div>
+<div class="text-warning mb-2" aria-label="5 star rating">★★★★★</div>
 
-<p>
-"I highly recommend Fitwi Central Hospital. The service was outstanding and the doctors were amazing."
+<p class="mb-0">
+“I highly recommend Fitwi Central Hospital. Excellent doctors and outstanding patient care.”
 </p>
 
 </div>
@@ -214,7 +223,7 @@ Your Health Is Our Priority
 Book an appointment with our specialists today.
 </p>
 
-<a href="appointment.html" class="btn btn-light btn-lg">
+<a href="appointment.html" class="btn btn-light btn-lg fw-semibold">
 Book Appointment
 </a>
 
@@ -228,27 +237,35 @@ Book Appointment
 
 <div class="container text-center">
 
-<h5>Fitwi Central Hospital</h5>
+<h2 class="h5 fw-bold">Fitwi Central Hospital</h2>
 
 <p>Delivering Health With Heart</p>
 
 <div class="mb-3">
 
-<i class="bi bi-facebook fs-4 me-3"></i>
+<a href="#" class="text-white me-3" aria-label="Facebook">
+<i class="bi bi-facebook fs-4"></i>
+</a>
 
-<i class="bi bi-instagram fs-4 me-3"></i>
+<a href="#" class="text-white me-3" aria-label="Instagram">
+<i class="bi bi-instagram fs-4"></i>
+</a>
 
-<i class="bi bi-twitter-x fs-4 me-3"></i>
+<a href="#" class="text-white me-3" aria-label="Twitter X">
+<i class="bi bi-twitter-x fs-4"></i>
+</a>
 
+<a href="#" class="text-white" aria-label="LinkedIn">
 <i class="bi bi-linkedin fs-4"></i>
+</a>
 
 </div>
 
-<p>
+<p class="mb-1">
 © 2026 Fitwi Central Hospital. All Rights Reserved.
 </p>
 
-<p>
+<p class="mb-0 small text-muted">
 Developed by <strong>Y-Creatives</strong>
 </p>
 

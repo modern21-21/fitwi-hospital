@@ -1,4 +1,18 @@
-/* ================= GLOBAL SETTINGS ================= */
+/* ================= ROOT DESIGN SYSTEM ================= */
+:root {
+    --primary: #1b6ef3;
+    --primary-dark: #0f4fc2;
+    --success: #00c389;
+    --danger: #ff4d4d;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --bg: #f5f8fc;
+    --card: #ffffff;
+    --border: #e6edf5;
+    --shadow: 0 8px 25px rgba(0,0,0,0.06);
+}
+
+/* ================= GLOBAL ================= */
 * {
     margin: 0;
     padding: 0;
@@ -7,84 +21,117 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f8fbff;
-    color: #333;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+/* smooth scrolling */
+html {
     scroll-behavior: smooth;
 }
 
-/* ================= NAVBAR ================= */
+/* ================= TYPOGRAPHY ================= */
+h1, h2, h3, h4, h5 {
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.3px;
+}
+
+p {
+    color: var(--muted);
+}
+
+/* ================= NAVBAR (HOSPITAL STYLE) ================= */
 .navbar {
-    transition: all 0.3s ease-in-out;
+    background: rgba(255,255,255,0.95) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 0;
 }
 
 .navbar-brand {
-    font-size: 1.3rem;
-    letter-spacing: 0.5px;
+    font-weight: 800;
+    color: var(--primary) !important;
+    font-size: 1.2rem;
 }
 
 .nav-link {
+    color: var(--text) !important;
     font-weight: 500;
     margin-left: 10px;
-    transition: 0.3s;
+    transition: 0.25s ease;
 }
 
 .nav-link:hover {
-    color: #00c896 !important;
+    color: var(--primary) !important;
 }
 
-/* ================= HERO SECTION ================= */
+/* ================= HERO ================= */
 header img {
-    filter: brightness(60%);
+    filter: brightness(65%);
 }
 
-header .btn {
-    border-radius: 30px;
-    padding: 12px 25px;
-    font-weight: 500;
-}
-
-/* Hero text animation */
 header h1 {
-    animation: fadeDown 1s ease-in-out;
+    font-size: 3rem;
+    font-weight: 800;
 }
 
 header p {
-    animation: fadeUp 1.2s ease-in-out;
+    font-size: 1.1rem;
+    color: #e5e7eb;
 }
 
-@keyframes fadeDown {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* ================= BUTTONS ================= */
+.btn {
+    border-radius: 12px;
+    font-weight: 600;
+    padding: 10px 18px;
+    transition: 0.25s ease;
 }
 
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.btn-primary {
+    background: var(--primary);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.btn-success {
+    background: var(--success);
+    border: none;
+}
+
+.btn-success:hover {
+    background: #00a873;
+    transform: translateY(-2px);
+}
+
+.btn-outline-light:hover {
+    transform: translateY(-2px);
 }
 
 /* ================= SECTIONS ================= */
 section {
-    padding: 70px 0;
+    padding: 85px 0;
 }
 
-/* ================= CARDS ================= */
+/* ================= CARDS (MODERN HOSPITAL UI) ================= */
 .card {
-    border: none;
-    border-radius: 15px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--card);
+    box-shadow: var(--shadow);
+    transition: all 0.25s ease;
     overflow: hidden;
-    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 14px 35px rgba(0,0,0,0.10);
 }
 
 .card img {
@@ -92,87 +139,71 @@ section {
     object-fit: cover;
 }
 
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-}
-
-/* ================= BUTTONS ================= */
-.btn-success {
-    background: linear-gradient(45deg, #00c896, #00a8ff);
-    border: none;
-}
-
-.btn-success:hover {
-    background: linear-gradient(45deg, #00a8ff, #00c896);
-    transform: scale(1.05);
-}
-
-.btn-primary {
-    background: #007bff;
-    border: none;
-}
-
-.btn-primary:hover {
-    background: #0056b3;
-    transform: scale(1.05);
-}
-
-/* ================= STATISTICS ================= */
+/* ================= STATISTICS BOX ================= */
 .shadow {
-    transition: 0.3s ease;
-}
-
-.shadow:hover {
-    transform: translateY(-5px);
-}
-
-/* ================= HEADINGS ================= */
-h1, h2, h3, h4 {
-    font-weight: 700;
-}
-
-h2 {
-    color: #0d6efd;
+    box-shadow: var(--shadow) !important;
+    border-radius: 14px;
 }
 
 /* ================= FORMS ================= */
 form input,
 form select,
 form textarea {
-    border-radius: 10px !important;
+    border-radius: 12px !important;
+    border: 1px solid var(--border);
     padding: 12px;
-    border: 1px solid #ddd;
-    transition: 0.3s;
+    font-size: 0.95rem;
+    transition: 0.2s;
 }
 
 form input:focus,
 form select:focus,
 form textarea:focus {
-    border-color: #00c896;
-    box-shadow: 0 0 8px rgba(0,200,150,0.3);
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(27,110,243,0.15);
+    outline: none;
 }
 
 /* ================= FOOTER ================= */
 footer {
-    background: #0d1b2a;
+    background: #0b1220;
+    color: #cbd5e1;
+    padding-top: 60px;
 }
 
 footer h5 {
-    margin-bottom: 15px;
-    color: #00c896;
+    color: #ffffff;
 }
 
-/* ================= CONTACT SECTION ================= */
-#contact img {
-    border-radius: 15px;
+footer i {
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+footer i:hover {
+    color: var(--primary);
+    transform: translateY(-3px);
+}
+
+/* ================= UTILITIES ================= */
+.text-muted {
+    color: var(--muted) !important;
+}
+
+.bg-light {
+    background: #f3f7ff !important;
 }
 
 /* ================= ANIMATIONS ================= */
+.card, .btn {
+    will-change: transform;
+}
+
+/* smooth fade helper */
 .fade-in {
     opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease;
+    transform: translateY(25px);
+    transition: 0.7s ease;
 }
 
 .fade-in.show {
@@ -180,20 +211,19 @@ footer h5 {
     transform: translateY(0);
 }
 
-/* ================= BACKGROUND UTILITIES ================= */
-.bg-light {
-    background-color: #f4f9ff !important;
-}
-
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
 
     header h1 {
-        font-size: 2rem;
+        font-size: 1.9rem;
     }
 
     header img {
         height: 70vh !important;
+    }
+
+    section {
+        padding: 60px 0;
     }
 
     .card img {
