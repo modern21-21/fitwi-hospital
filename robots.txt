@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fitwi-central-hospital.netlify.app/sitemap.xml
